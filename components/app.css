@@ -1,0 +1,87 @@
+.test {
+    color: blue;
+}
+
+
+.card {
+    position: relative;
+    height: 500px;
+    width: 221.6px;
+    /*border: 1px solid #ccc;*/
+}
+
+.carousel-item {
+    display: block;
+    width: 1180px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    width: 1108px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.article {
+    /*text-transform: uppercase;*/
+    /*position: absolute;*/
+    /*bottom: -224px;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*-webkit-transition: all .55s cubic-bezier(.5,.1,.3,.8);*/
+    /*transition: all .55s cubic-bezier(.5,.1,.3,.8);*/
+    /*z-index: 2;*/
+    /*padding-bottom: 50px;*/
+    /*padding-top: 40px;*/
+    /*background: red;*/
+    background:white;
+    font-size:1rem;
+    width:100%;
+    height:226px;
+    color:#000000;
+    padding:.3rem;
+    position:absolute;
+    margin:0;
+    transition:.6s;
+    text-align: center;
+}
+
+.card:hover .article {
+    transform: translateY(-15rem);
+}
+
+.next {
+    right: 0;
+}
+
+button {
+    -webkit-writing-mode: horizontal-tb;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    width: 35px;
+    height: 55px;
+    position: absolute;
+    z-index: 1;
+    background: #000;
+    color: #fff;
+    top: calc(500px/ 2 - 55px/ 2);
+    width: 35px;
+    height: 55px;
+}
+
