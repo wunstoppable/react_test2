@@ -3,3 +3,4 @@
  */
 var test = 1;
 console.log(test);
+const vscode = "OK"
