@@ -4,6 +4,8 @@ import Child from './child';
 import Hello from './Hello';
 import Login from './login';
 import Card from './card'
+import Swiper from 'swiper';
+
 class App extends React.Component {
 
     constructor(props) {
@@ -18,7 +20,8 @@ class App extends React.Component {
                 'https://dm.victoriassecret.com/imagefeatures/0x0/1267904620233/03-lily-236x500.jpg',
                 'https://dm.victoriassecret.com/imagefeatures/0x0/1267904620233/04-elsa-236x500.jpg',
                 'https://dm.victoriassecret.com/imagefeatures/0x0/1267904620233/05-jasmine-236x500.jpg',
-            'https://dm.victoriassecret.com/imagefeatures/0x0/1267904620233/06-josephine-236x500.jpg']
+            'https://dm.victoriassecret.com/imagefeatures/0x0/1267904620233/06-josephine-236x500.jpg',
+            'https://dm.victoriassecret.com/imagefeatures/0x0/1267904620233/07-lais-236x500.jpg']
         }
     }
 
@@ -26,7 +29,18 @@ class App extends React.Component {
         this.setState({info : 'new test'});
         let props = {width:300,height:400};
         //测试d3
-        d3chart.create(this.div,props, this.state.data)
+        d3chart.create(this.div,props, this.state.data);
+
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+            paginationClickable: true,
+            nextButton: '.next',
+            prevButton: '.prev',
+            // spaceBetween: 30,
+            freeMode: true
+        });
     }
 
     handleClick() {
@@ -58,13 +72,18 @@ class App extends React.Component {
                 <Child info={info => this.handleChange(info)}/>
                 <Hello info={this.state.info}/>
 
-
-                <div className="carousel-item">
-                    <button>&lt;</button>
-                    <div className="container">
-                        {this.state.img.map((link, index) => <Card key={index} link={link}/>)}
+                <div className="carousel">
+                    <div className="carousel-items">
+                        <div className="carousel-warp">
+                            <button className="prev">&lt;</button>
+                            <div className="swiper-container">
+                                <div className="swiper-wrapper">
+                                    {this.state.img.map((link, index) => <Card key={index} link={link}/>)}
+                                </div>
+                            </div>
+                            <button className="next">&gt;</button>
+                        </div>
                     </div>
-                    <button className="next">&gt;</button>
                 </div>
             </div>
         );

@@ -12,10 +12,14 @@ class myCard extends React.Component {
 
     render(){
         return (
-            <div className="card">
-                <img src={this.props.link}/>
-                <div className="article">
-                    <p>Model</p>
+            <div className="swiper-slide">
+                <div className="carousel-item">
+                    <img src={this.props.link} draggable='false'/>
+                    <div className="article">
+                        <p>Model</p>
+                        <p>Model again</p>
+                        <p>Model hahaha</p>
+                    </div>
                 </div>
             </div>
         )

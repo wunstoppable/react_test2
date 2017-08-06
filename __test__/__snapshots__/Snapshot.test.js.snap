@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<header
+  className="header"
+>
+  <h1>
+    todos
+  </h1>
+  <input
+    className="new-todo"
+    onKeyUp={[Function]}
+    placeholder="input todo item"
+    type="text"
+  />
+</header>
+`;
