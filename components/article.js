@@ -9,8 +9,17 @@ class article extends React.Component {
     }
 
     render() {
+        return (
+            <div className="article">
+                <p>Model</p>
+                <p>Model again</p>
+                <p>Model hahaha</p>
+            </div>
+        )
 
     }
 
 
 }
+
+export default article;

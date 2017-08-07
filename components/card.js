@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Article from './article';
 
 /**
  * @description
@@ -15,11 +16,7 @@ class myCard extends React.Component {
             <div className="swiper-slide">
                 <div className="carousel-item">
                     <img src={this.props.link} draggable='false'/>
-                    <div className="article">
-                        <p>Model</p>
-                        <p>Model again</p>
-                        <p>Model hahaha</p>
-                    </div>
+                    <Article/>
                 </div>
             </div>
         )
