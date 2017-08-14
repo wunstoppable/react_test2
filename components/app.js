@@ -39,7 +39,8 @@ class App extends React.Component {
             nextButton: '.next',
             prevButton: '.prev',
             // spaceBetween: 30,
-            freeMode: true
+            freeMode: true,
+            //resistanceRatio:0
         });
     }
 
@@ -85,6 +86,17 @@ class App extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div>haha</div>
+                <div>haha</div>
+                <div>haha</div>
+                <div>haha</div><div>haha</div>
+                <div>haha</div>
+                <div>haha</div>
+                <div>haha</div>
+                <div>haha</div>
+                <div>haha</div>
+                <div>haha</div>
+
             </div>
         );
     }
