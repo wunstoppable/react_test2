@@ -63,6 +63,28 @@ class App extends React.Component {
     render(){
         return (
             <div className="test">
+                <svg style={{'position': 'absolute', 'width': '0', 'height': '0', 'overflow': 'hidden'}} version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <symbol id="icon-chevron-thin-left" viewBox="0 0 20 20">
+                            <title>chevron-thin-left</title>
+                            <path d="M13.891 17.418c0.268 0.272 0.268 0.709 0 0.979s-0.701 0.271-0.969 0l-7.83-7.908c-0.268-0.27-0.268-0.707 0-0.979l7.83-7.908c0.268-0.27 0.701-0.27 0.969 0s0.268 0.709 0 0.979l-7.141 7.419 7.141 7.418z"></path>
+                        </symbol>
+                        <symbol id="icon-chevron-thin-up" viewBox="0 0 20 20">
+                            <title>chevron-thin-up</title>
+                            <path d="M2.582 13.891c-0.272 0.268-0.709 0.268-0.979 0s-0.271-0.701 0-0.969l7.908-7.83c0.27-0.268 0.707-0.268 0.979 0l7.908 7.83c0.27 0.268 0.27 0.701 0 0.969s-0.709 0.268-0.978 0l-7.42-7.141-7.418 7.141z"></path>
+                        </symbol>
+                        <symbol id="icon-close" viewBox="0 0 24 24">
+                            <title>close</title>
+                            <path d="M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z"></path>
+                        </symbol>
+                    </defs>
+                </svg>
+
+
+
+
+
+
                 <p>Hello, world!</p>
                 <input type="text" ref={(input) => this.input = input}/>
                 <input className="btn btn-primary" type="button" onClick={() => this.handleClick()} value="Button"/>
@@ -76,13 +98,20 @@ class App extends React.Component {
                 <div className="carousel">
                     <div className="carousel-items">
                         <div className="carousel-warp">
-                            <button className="prev">&lt;</button>
+                            {/*<button className="prev">*/}
+                                {/*<svg viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet" style={{'pointer-events': 'none', 'display': 'block', 'width': '100%', 'height': '100%'}}><g><path className="path1" d="M18.8 16l-16-16-2.8 2.8 13.2 13.2-13.2 13.2 2.8 2.8 16-16z"></path></g></svg>*/}
+                            {/*</button>*/}
+                            <button className="prev">
+                                <svg className="icon icon-chevron-thin-left"><use xlinkHref="#icon-chevron-thin-left"></use></svg>
+                            </button>
                             <div className="swiper-container">
                                 <div className="swiper-wrapper">
                                     {this.state.img.map((link, index) => <Card key={index} link={link}/>)}
                                 </div>
                             </div>
-                            <button className="next">&gt;</button>
+                            <button className="next">
+                                <svg className="icon icon-chevron-thin-left"><use xlinkHref="#icon-chevron-thin-up"></use></svg>
+                            </button>
                         </div>
                     </div>
                 </div>
